@@ -6,9 +6,9 @@ setup(
 	author = "Jakob Svanholm",
 	author_email = "jakob@rymdlego.se",
 	url = "https://github.com/rymdlego/vquery",
-	description = "A tool for querying vCenter for various useful information.",
+	description = "A tool for querying vCenter for various information.",
 	keywords = "vSphere VMware vCenter",
 	scripts=['vq'],
 	packages=['vquery'],
-	install_requires=['docopt', 'pyVmomi']
+	install_requires=['docopt', 'pyVmomi', 'future', 'six']
 )

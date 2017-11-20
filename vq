@@ -38,6 +38,7 @@ AUTHENTICATION:
 
 from vquery import *
 from datetime import date
+from six import itervalues
 
 __version__ = 0.31
 
@@ -102,7 +103,7 @@ def main():
 			"snapshot": _snapshot }
 
 	# Set quick to True if all values in _properties are False
-	_quick = all(v == False for v in _properties.itervalues())
+	_quick = all(v == False for v in itervalues(_properties))
 
 	# Set up connection
 	si = setup_connection(_server, _username, _password, _config_id, debug=_debug) 

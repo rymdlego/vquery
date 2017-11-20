@@ -4,6 +4,8 @@
 Interface for clean connection-to and disconnection-from a vCenter server
 '''
 
+#from __future__ import print_function
+from builtins import input
 from pyVim.connect import Disconnect, SmartConnect
 from sys import exit
 from .vqconfig import getconfig
@@ -65,9 +67,9 @@ def setup_connection(server, username, password, config_id, debug):
 
 	# Supply any missing credentials.
 	if config["server"] is None:
-		config["server"] = raw_input("Host/IP: ")
+		config["server"] = input("Host/IP: ")
 	if config["username"] is None:
-		config["username"] = raw_input("Username: ")
+		config["username"] = input("Username: ")
 	if config["password"] is None:
 		config["password"] = getpass.getpass()  
 	si = connect(config["server"], config["username"], config["password"], config["port"], debug)
