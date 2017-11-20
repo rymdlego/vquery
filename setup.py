@@ -5,6 +5,7 @@ setup(
 	version = "0.31",
 	author = "Jakob Svanholm",
 	author_email = "jakob@rymdlego.se",
+	url = "https://github.com/rymdlego/vquery",
 	description = "A tool for querying vCenter for various useful information.",
 	keywords = "vSphere VMware vCenter",
 	scripts=['vq'],
