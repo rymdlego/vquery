@@ -40,7 +40,7 @@ from vquery import *
 from datetime import date
 from six import itervalues
 
-__version__ = 0.31
+__version__ = 0.32
 
 def getfolderpath(item, path):
 	pathname = item.name + "/" + path

@@ -32,7 +32,8 @@ The command line authentication parameters are:
   --vc=<connection profile>      Specify the ID of vCenter connection profile from config file. 
 
 If you have created a connection profile called 'default' in .vquery, this profile will be used to 'fill in
-the blanks' whenever any credentials are missing.
+the blanks' whenever any credentials are missing. If you only have one vCenter server, you can specify it
+using the default tag for convenience.
 
 
 USAGE GUIDE
