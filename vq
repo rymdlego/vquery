@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Usage:
   vq --help
@@ -171,8 +171,24 @@ def main():
 					print("%s: Heartbeat Status [%s]" % (item["name"], item["guestHeartbeatStatus"]))
 				if "overallStatus" in item:
 					print("%s: Overall Status [%s]" % (item["name"], item["overallStatus"]))
+				# Get all IP addresses. They can be found in two places. guest.net and summary.guest.ipAddress
+				addresses = []
+				if "guest.net" in item:
+					try:
+						for nic in item["guest.net"]:
+							for adr in nic.ipConfig.ipAddress:
+								addresses.append(adr.ipAddress)
+					except:
+						continue
 				if "summary.guest.ipAddress" in item:
-					print("%s: Guest IP Address [%s]" % (item["name"], item["summary.guest.ipAddress"]))
+					addresses.append(item["summary.guest.ipAddress"])
+				# If addresses in list, print unique ones. 
+				if len(addresses) > 0:
+					print_addresses = []
+					for adr in addresses:
+						if adr not in print_addresses:
+							print_addresses.append(adr)
+							print("%s: Guest IP Address [%s]" % (item["name"], adr))
 				if "summary.guest.hostName" in item:
 					print("%s: Guest Hostname [%s]" % (item["name"], item["summary.guest.hostName"]))
 				if "summary.guest.guestFullName" in item:

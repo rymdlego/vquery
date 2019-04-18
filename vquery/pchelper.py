@@ -4,7 +4,6 @@ Property Collector helper module.
 
 import pyVmomi
 
-
 # Shamelessly borrowed from:
 # https://github.com/dnaeon/py-vconnector/blob/master/src/vconnector/core.py
 def collect_properties(service_instance, view_ref, obj_type, path_set=None,

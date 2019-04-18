@@ -19,7 +19,6 @@ def getconfig(config_id="default"):
 	home = expanduser("~")
 	file_path = home + "/.vquery"
 
-
 	try:
 		# Open the config file.
 		config_file = open(file_path, "r")
@@ -76,12 +75,12 @@ def createconfig(file_path):
 	"#\n",
 	"# If you don't specify a password, you will be prompted to type it whenever you run a command.\n",
 	"#\n",
-	"# The [default] tag makes up your default params, which vQuery will fall back on for any missing credentials.\n",
+	"# The [default] tag makes up your default params, which is the default site to use if no specific vCenter is specified.\n",
 	"#\n",
-	"[site1]server: yourhost\n",
-	"[site1]port: 443\n",
-	"[site1]username: you@yourhost\n",
-	"[site1]password: yourpassword\n",
+	"[default]server: yourhost\n",
+	"[default]port: 443\n",
+	"[default]username: you@yourhost\n",
+	"[default]password: yourpassword\n",
 	"[site2]server: someotherhost\n",
 	"[site2]port: 443\n",
 	"[site2]username: you@someotherhost\n",

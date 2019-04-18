@@ -27,6 +27,7 @@ def get_properties(object_type, _properties):
 			properties.append("summary.storage.committed")
 			properties.append("summary.storage.uncommitted")
 			properties.append("guest.disk")
+			properties.append("guest.net")
 			properties.append("summary.quickStats.uptimeSeconds")
 			properties.append("summary.quickStats.guestMemoryUsage")
 			properties.append("summary.config.vmPathName")
@@ -48,6 +49,7 @@ def get_properties(object_type, _properties):
 			properties.append("runtime.powerState")
 		if _properties["guestip"]:
 			properties.append("summary.guest.ipAddress")
+			properties.append("guest.net")
 		if _properties["guestos"]:
 			properties.append("summary.guest.guestFullName")
 		if _properties["snapshot"]:
