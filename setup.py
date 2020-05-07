@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
 	name = "vquery",
-	version = "0.32",
+	version = "0.33",
 	author = "Jakob Svanholm",
 	author_email = "rymdlego@gmail.com",
 	url = "https://github.com/rymdlego/vquery",
