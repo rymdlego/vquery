@@ -71,7 +71,7 @@ def createconfig(file_path):
 	"#\n",
 	"# You can add connection profiles by adding your own [tags] in this file.\n",
 	"# This is useful if you have several vCenter deployments you frequently connect to.\n",
-	"# Example usage: vq vm --vq=site2\n",
+	"# Example usage: vq vm --vc=site2\n",
 	"#\n",
 	"# If you don't specify a password, you will be prompted to type it whenever you run a command.\n",
 	"#\n",
