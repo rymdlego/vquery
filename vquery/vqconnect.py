@@ -13,9 +13,6 @@ import ssl
 import requests
 import atexit
 import getpass
-from time import clock
-
-START = clock()
 
 # Disabling urllib3 ssl warnings
 requests.packages.urllib3.disable_warnings()
@@ -33,9 +30,9 @@ def connect(host, username, password, port, debug, sslContext=context):
 	except IOError as e:
 		print("I/O error({0}): {1}".format(e.errno, e.strerror))
 		exit()
-	except:
-		print("ERROR: Unable to connect.")
-		exit()
+#	except:
+#		print("ERROR: Unable to connect.")
+#		exit()
 	else:
 		if debug:
 			print("INFO: Successfully connected to %s" % host)
@@ -49,9 +46,6 @@ def disconnect(si, debug):
 	else:
 		if debug: 
 			print("INFO: Disconnected.")
-			end = clock()
-			total = end - START
-			print("INFO: Completed in {0} seconds.".format(total))
 
 def setup_connection(server, username, password, config_id, debug):
 	# Set up connection
